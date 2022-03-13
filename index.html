@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN Fonts Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Projeto Traveller - Cadastro de Pontos Turísticos</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <h2>Projeto Traveller</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="">Hotéis</a></li>
+                <li><a href="">Bares</a></li>
+                <li><a href="">Restaurantes</a></li>
+                <li><a href="">Parques</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Cadastro de Pontos Turísticos</h2>
+
+        <form name="dados" id="dados" action="" method="post">
+            <div class="campos">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="ex: Museu de Arte de São Paulo (MASP)" autofocus required>
+
+                <label for="breve-descricao">Descrição</label>
+                <textarea name="breve-descricao" id="breve-descricao" placeholder="ex: É um centro cultural e museu brasileiro concebido em 1947 idealizado pelo jornalista paraibano Assis Chateaubriand com o crítico de arte italiano Pietro Bardi. situado desde 7 de novembro de 1968, na Avenida Paulista, cidade de São Paulo (estado homônimo), em um edifício projetado pela arquiteta ítalo-brasileira Lina Bo Bardi para ser sua sede. Considerado uma das mais importantes instituições culturais brasileiras."></textarea>
+    
+            </div>
+            <hr>
+            <h3>Localização:</h3>
+            <div class="campos">
+                <div class="em__linha">
+                    <label for="cep">Cep</label>
+                    <label for="rua">Rua</label>
+                    <label for="numero">Número</label>
+                </div>
+                <div class="em__linha">
+                    <input type="text" id="cep" required placeholder="ex: 01310-200" onblur="pesquisacep(this.value);"">
+                    <input type="text" id="rua" required placeholder="ex: Av. Paulista">
+                    <input type="number" id="numero" required placeholder="ex: 1578">
+                </div>
+            </div>
+            <div class="campos">
+                <div class="em__linha">
+                    <label for="bairro">Bairro</label>
+                    <label for="cidade">Cidade</label>
+                    <label for="estados">Estado</label>
+                </div>
+                <div class="em__linha">
+                    <input type="text" id="bairro" required placeholder="ex: Bela Vista">                    
+                    <input type="text" id="cidade" required placeholder="ex: São Paulo">
+                    <input list="uf" id="estados" class="lista" required placeholder="ex: Selecione o estado">
+                    <datalist id="uf">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </datalist>
+                </div>
+            </div>
+            <hr>
+            <h3>Outras informações:</h3>
+            <div class="campos">
+                <div class="em__linha">
+                    <label for="inicio-funcionamento">Início do horário de funcionamento</label>
+                    <label for="fim-funcionamento">Fim do horário de funcionamento</label>
+                    <label for="melhor-dia">Melhor dia para visitação</label>
+                </div>
+                <div class="em__linha">
+                    <input type="time" id="inicio-funcionamento">
+                    <input type="time" id="fim-funcionamento">
+                    <input list="list-melhor-dia" id="melhor-dia" class="lista" required
+                        placeholder="ex: Selecione o dia">
+                    <datalist id="list-melhor-dia">
+                        <option value="Domingo"></option>
+                        <option value="Segunda"></option>
+                        <option value="Terça"></option>
+                        <option value="Quarta"></option>
+                        <option value="Quinta"></option>
+                        <option value="Sexta"></option>
+                        <option value="Sábado"></option>
+                    </datalist>
+                </div>
+            </div>
+            <div class="campos">
+                <div class="em__linha">
+                    <label for="inicio-procura">Início do horário de maior procura</label>
+                    <label for="fim-procura">Fim do horário de maior procura</label>
+                    <label for="data">Data do Cadastro</label>
+                </div>
+                <div class="em__linha">
+                    <input type="time" id="inicio-procura">
+                    <input type="time" id="fim-procura">
+                    <input type="date" id="data">
+                </div>
+            </div>
+            <div class="campos">
+                <div class="em__linha">
+                    <label for="valor">Valor da entrada</label>
+                    <label for="email">E-mail</label>
+                    <label for="site">Site</label>
+                </div>
+                <div class="em__linha">
+                    <input type="number" id="valor" required placeholder="ex: 45">
+                    <input type="email" id="email" required placeholder="ex: imprensa@masp.org.br">
+                    <input type="url" id="site" required placeholder="ex: www.masp.org.br">
+                </div>
+            </div>
+            <div class="campos">
+                <label for="recomendacao-avaliacao">Recomendação/avaliação</label>
+                <textarea name="" id="recomendacao-avaliacao" placeholder="Recomendação/avaliação"></textarea>
+            </div>
+            <div class="botoes">
+                <input type="submit" value="Gravar ponto turístico">
+            </div>
+        </form>
+    </div>
+
+    <!-- chamar javascrit -->
+    <script src="./js/viacep.js"></script>
+</body>
+
+</html>
