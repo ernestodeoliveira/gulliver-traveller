@@ -34,9 +34,10 @@
             <div class="campos">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" placeholder="ex: Museu de Arte de São Paulo (MASP)" autofocus required>
-
+            </div>
+            <div class="campos">
                 <label for="breve-descricao">Descrição</label>
-                <textarea name="breve-descricao" id="breve-descricao"
+                <textarea name="breve-descricao" id="breve-descricao" required
                     placeholder="ex: É um centro cultural e museu brasileiro concebido em 1947 idealizado pelo jornalista paraibano Assis Chateaubriand com o crítico de arte italiano Pietro Bardi. situado desde 7 de novembro de 1968, na Avenida Paulista, cidade de São Paulo (estado homônimo), em um edifício projetado pela arquiteta ítalo-brasileira Lina Bo Bardi para ser sua sede. Considerado uma das mais importantes instituições culturais brasileiras."></textarea>
 
             </div>
@@ -49,7 +50,7 @@
                     <label for="numero">Número</label>
                 </div>
                 <div class="em__linha">
-                    <input type="text" id="cep" required placeholder="ex: 01310-200" onblur="pesquisacep(this.value);">
+                    <input type="text" id="cep" placeholder="ex: 01310-200" onblur="pesquisacep(this.value);">
                     <input type="text" id="rua" required placeholder="ex: Av. Paulista">
                     <input type="number" id="numero" required placeholder="ex: 1578">
                 </div>
@@ -63,7 +64,7 @@
                 <div class="em__linha">
                     <input type="text" id="bairro" required placeholder="ex: Bela Vista">
                     <input type="text" id="cidade" required placeholder="ex: São Paulo">
-                    <input list="uf" id="estados" class="lista" required placeholder="ex: Selecione o estado">
+                    <input list="uf" id="estados" class="lista" required placeholder="Selecione o estado">
                     <datalist id="uf">
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -105,9 +106,9 @@
                     <label for="site">Site</label>
                 </div>
                 <div class="em__linha">
-                    <input type="tel" id="telefone" required placeholder="ex: (11) 3149-5959">
-                    <input type="email" id="email" required placeholder="ex: imprensa@masp.org.br">
-                    <input type="url" id="site" required placeholder="ex: www.masp.org.br">
+                    <input type="tel" id="telefone" placeholder="ex: (11) 3149-5959">
+                    <input type="email" id="email" placeholder="ex: imprensa@masp.org.br">
+                    <input type="url" id="site" placeholder="ex: www.masp.org.br">
                 </div>
             </div>
             <hr>
@@ -121,15 +122,14 @@
                 <div class="em__linha">
                     <input type="time" id="inicio-funcionamento">
                     <input type="time" id="fim-funcionamento">
-                    <input list="list-melhor-dia" id="melhor-dia" class="lista" required
-                        placeholder="ex: Selecione o dia">
+                    <input list="list-melhor-dia" id="melhor-dia" class="lista" placeholder="ex: Selecione o dia">
                     <datalist id="list-melhor-dia">
                         <option value="Domingo"></option>
-                        <option value="Segunda"></option>
-                        <option value="Terça"></option>
-                        <option value="Quarta"></option>
-                        <option value="Quinta"></option>
-                        <option value="Sexta"></option>
+                        <option value="Segunda-feira"></option>
+                        <option value="Terça-feira"></option>
+                        <option value="Quarta-feira"></option>
+                        <option value="Quinta-feira"></option>
+                        <option value="Sexta-feira"></option>
                         <option value="Sábado"></option>
                     </datalist>
                 </div>
@@ -149,20 +149,18 @@
                         <label for="pago">Pago</label>
                     </fieldset>
 
-                    <input type="number" id="valor" required placeholder="ex: 45">
+                    <input type="number" id="valor" placeholder="ex: 45">
 
                     <fieldset name="infos">
                         <input type="checkbox" name="pet-friendly" id="pet-friendly" class="radio_check">
                         <label for="pet-friendly">Pet Friendly</label>
-                        <input type="checkbox" name="estacionamento" id="estacionamento" class="radio_check">
-                        <label for="estacionamento">Estacionamento</label>
                     </fieldset>
                 </div>
             </div>
 
             <div class="campos">
                 <label for="recomendacao-avaliacao">Recomendação/avaliação</label>
-                <textarea name="" id="recomendacao-avaliacao" placeholder="Recomendação/avaliação"></textarea>
+                <textarea name="" id="recomendacao-avaliacao" placeholder="ex.: O museu é  maravilhoso, com obras de Van Gogh, Monet, Rembrandt, Portinari, Anita Mafalti, Tarsila do Amaral e muitos outros artistas maravilhosos. Super recomendo a visita."></textarea>
             </div>
             <div class="botoes">
                 <input type="submit" value="Gravar ponto turístico">

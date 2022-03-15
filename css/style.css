@@ -127,7 +127,8 @@ fieldset {
     padding: 10px;
 }
 
-.radio_check {
+input.radio_check {
+    width: 30px;
     height: 20px;
 }
 
@@ -150,9 +151,16 @@ textarea {
     height: 50px;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
+    font-weight: 500;
     border: 0;
     background-color: #ed145d;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    border: 2px solid #ed145d;
+}
+
+.botoes input:hover {
+    background-color: transparent;
+    color: #ed145d;
 }
