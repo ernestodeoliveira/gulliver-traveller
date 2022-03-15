@@ -1,11 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&amp;family=Open+Sans+Condensed:wght@300&amp;display=swap');
 
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: #ffffff;
+		color: #000000;
+	}
+
+    label {
+        color: #000000;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #333;
+		color: #ffffff;
+	}
+
+    label {
+        color: #ffffff;
+    }
+}
+
 /* regra para todos elementos do HTML */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     font-family: 'Lato', sans-serif
@@ -20,21 +44,26 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .header h2 {
     color: #fff;
     font-size: 20px;
 }
+
 .menu ul {
     list-style: none;
     display: flex;
 }
+
 .menu li{
     margin: 0 5px;
 }
+
 .menu a{
     text-decoration: none;
     color: #fff;
 }
+
 .container {
     width: 90%;
     height: auto;
@@ -44,18 +73,21 @@ body {
     display: flex;
     flex-direction: column;
 }
-h2,
-h3 {
+
+h2, h3 {
     margin: 10px 10px 0;
-    color: #dc143c;
+    color: #ed145d;
     font-weight: 900;
 }
+
 p {
     margin-bottom: 10px;
 }
+
 hr {
     margin: 20px 10px;
 }
+
 .campos {
     color: #333;
     margin: 5px auto;
@@ -64,19 +96,21 @@ hr {
     display: flex;
     flex-direction: column;
 }
+
 .campos label {
     margin: 5px 0;
     font-weight: 900;
-    color: #666;
+    /*color: #666; */
 }
-input,
-textarea {
+
+input, textarea {
     width: 100%;
     height: 50px;
     padding-left: 10px;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
+
 .em__linha {
     margin-bottom: 5px;
     display: flex;
@@ -84,11 +118,19 @@ textarea {
     justify-content: space-between;
 }
 
-.em__linha label,
-.em__linha input {
+.em__linha label, .em__linha input, .em__linha fieldset {
     width: 30%;
     margin: 0 2px;
 }
+
+fieldset {
+    padding: 10px;
+}
+
+.radio_check {
+    height: 20px;
+}
+
 textarea {
     height: 150px;
     resize: none;
@@ -96,18 +138,20 @@ textarea {
     border: 1px solid #666;
     padding: 10px;
 }
+
 .botoes {
     padding: 10px;
     display: flex;
     justify-content: flex-end;
 }
+
 .botoes input {
     width: 250px;
     height: 50px;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     border: 0;
-    background-color: #dc143c;
+    background-color: #ed145d;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;

@@ -36,8 +36,9 @@
                 <input type="text" id="nome" placeholder="ex: Museu de Arte de São Paulo (MASP)" autofocus required>
 
                 <label for="breve-descricao">Descrição</label>
-                <textarea name="breve-descricao" id="breve-descricao" placeholder="ex: É um centro cultural e museu brasileiro concebido em 1947 idealizado pelo jornalista paraibano Assis Chateaubriand com o crítico de arte italiano Pietro Bardi. situado desde 7 de novembro de 1968, na Avenida Paulista, cidade de São Paulo (estado homônimo), em um edifício projetado pela arquiteta ítalo-brasileira Lina Bo Bardi para ser sua sede. Considerado uma das mais importantes instituições culturais brasileiras."></textarea>
-    
+                <textarea name="breve-descricao" id="breve-descricao"
+                    placeholder="ex: É um centro cultural e museu brasileiro concebido em 1947 idealizado pelo jornalista paraibano Assis Chateaubriand com o crítico de arte italiano Pietro Bardi. situado desde 7 de novembro de 1968, na Avenida Paulista, cidade de São Paulo (estado homônimo), em um edifício projetado pela arquiteta ítalo-brasileira Lina Bo Bardi para ser sua sede. Considerado uma das mais importantes instituições culturais brasileiras."></textarea>
+
             </div>
             <hr>
             <h3>Localização:</h3>
@@ -48,7 +49,7 @@
                     <label for="numero">Número</label>
                 </div>
                 <div class="em__linha">
-                    <input type="text" id="cep" required placeholder="ex: 01310-200" onblur="pesquisacep(this.value);"">
+                    <input type="text" id="cep" required placeholder="ex: 01310-200" onblur="pesquisacep(this.value);">
                     <input type="text" id="rua" required placeholder="ex: Av. Paulista">
                     <input type="number" id="numero" required placeholder="ex: 1578">
                 </div>
@@ -60,7 +61,7 @@
                     <label for="estados">Estado</label>
                 </div>
                 <div class="em__linha">
-                    <input type="text" id="bairro" required placeholder="ex: Bela Vista">                    
+                    <input type="text" id="bairro" required placeholder="ex: Bela Vista">
                     <input type="text" id="cidade" required placeholder="ex: São Paulo">
                     <input list="uf" id="estados" class="lista" required placeholder="ex: Selecione o estado">
                     <datalist id="uf">
@@ -96,6 +97,20 @@
                 </div>
             </div>
             <hr>
+            <h3>Contato:</h3>
+            <div class="campos">
+                <div class="em__linha">
+                    <label for="telefone">Telefone</label>
+                    <label for="email">E-mail</label>
+                    <label for="site">Site</label>
+                </div>
+                <div class="em__linha">
+                    <input type="tel" id="telefone" required placeholder="ex: (11) 3149-5959">
+                    <input type="email" id="email" required placeholder="ex: imprensa@masp.org.br">
+                    <input type="url" id="site" required placeholder="ex: www.masp.org.br">
+                </div>
+            </div>
+            <hr>
             <h3>Outras informações:</h3>
             <div class="campos">
                 <div class="em__linha">
@@ -121,28 +136,30 @@
             </div>
             <div class="campos">
                 <div class="em__linha">
-                    <label for="inicio-procura">Início do horário de maior procura</label>
-                    <label for="fim-procura">Fim do horário de maior procura</label>
-                    <label for="data">Data do Cadastro</label>
-                </div>
-                <div class="em__linha">
-                    <input type="time" id="inicio-procura">
-                    <input type="time" id="fim-procura">
-                    <input type="date" id="data">
-                </div>
-            </div>
-            <div class="campos">
-                <div class="em__linha">
+                    <label for="ingresso">Ingresso</label>
                     <label for="valor">Valor da entrada</label>
-                    <label for="email">E-mail</label>
-                    <label for="site">Site</label>
+                    <label for="infos">Mais informações</label>
                 </div>
                 <div class="em__linha">
+
+                    <fieldset>
+                        <input type="radio" name="ingresso" id="gratuito" class="radio_check">
+                        <label for="gratuito">Gratuito</label>
+                        <input type="radio" name="ingresso" id="pago" class="radio_check">
+                        <label for="pago">Pago</label>
+                    </fieldset>
+
                     <input type="number" id="valor" required placeholder="ex: 45">
-                    <input type="email" id="email" required placeholder="ex: imprensa@masp.org.br">
-                    <input type="url" id="site" required placeholder="ex: www.masp.org.br">
+
+                    <fieldset name="infos">
+                        <input type="checkbox" name="pet-friendly" id="pet-friendly" class="radio_check">
+                        <label for="pet-friendly">Pet Friendly</label>
+                        <input type="checkbox" name="estacionamento" id="estacionamento" class="radio_check">
+                        <label for="estacionamento">Estacionamento</label>
+                    </fieldset>
                 </div>
             </div>
+
             <div class="campos">
                 <label for="recomendacao-avaliacao">Recomendação/avaliação</label>
                 <textarea name="" id="recomendacao-avaliacao" placeholder="Recomendação/avaliação"></textarea>
@@ -154,6 +171,7 @@
     </div>
 
     <!-- chamar javascrit -->
+    <!-- Referência https://viacep.com.br/exemplo/javascript/ -->
     <script src="./js/viacep.js"></script>
 </body>
 
