@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CDN Fonts Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <!-- link para os estilos -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Projeto Traveller - Cadastro de Pontos Turísticos</title>
 </head>
@@ -141,26 +139,36 @@
                     <label for="infos">Mais informações</label>
                 </div>
                 <div class="em__linha">
-
                     <fieldset>
                         <input type="radio" name="ingresso" id="gratuito" class="radio_check">
                         <label for="gratuito">Gratuito</label>
                         <input type="radio" name="ingresso" id="pago" class="radio_check">
                         <label for="pago">Pago</label>
                     </fieldset>
-
                     <input type="number" id="valor" placeholder="ex: 45">
-
                     <fieldset name="infos">
-                        <input type="checkbox" name="pet-friendly" id="pet-friendly" class="radio_check">
-                        <label for="pet-friendly">Pet Friendly</label>
+                        <input type="checkbox" name="infos" id="pet-friendly" class="radio_check">
+                        <label for="pet-friendly">Pet Friendly</label>                        
+                        <input type="checkbox" name="infos" id="pcd" class="radio_check">
+                        <label for="pcd">Acessível PCD</label>
                     </fieldset>
                 </div>
             </div>
-
             <div class="campos">
-                <label for="recomendacao-avaliacao">Recomendação/avaliação</label>
-                <textarea name="" id="recomendacao-avaliacao" placeholder="ex.: O museu é  maravilhoso, com obras de Van Gogh, Monet, Rembrandt, Portinari, Anita Mafalti, Tarsila do Amaral e muitos outros artistas maravilhosos. Super recomendo a visita."></textarea>
+                <div class="em__linha">
+                    <label for="data_visita">Data da visita</label>
+                    <label for="data_hora_cadastro">Data e hora do cadastro</label>
+                    <label for="avaliacao">Avaliação (de 1 a 5)</label>
+                </div>
+                <div class="em__linha">
+                    <input type="date" id="data_visita" > 
+                    <input type="datetime-local" id="data_hora_cadastro" >                    
+                    <input type="range" list="notas" id="avaliacao" min="1" max="5">
+                </div>
+            </div>
+            <div class="campos">
+                <label for="recomendacao">Recomendação</label>
+                <textarea name="" id="recomendacao" placeholder="ex.: O museu é  maravilhoso, com obras de Van Gogh, Monet, Rembrandt, Portinari, Anita Mafalti, Tarsila do Amaral e muitos outros artistas maravilhosos. Super recomendo a visita."></textarea>
             </div>
             <div class="botoes">
                 <input type="submit" value="Gravar ponto turístico">
