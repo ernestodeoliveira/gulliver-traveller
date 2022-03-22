@@ -100,7 +100,6 @@ hr {
 .campos label {
     margin: 5px 0;
     font-weight: 900;
-    /*color: #666; */
 }
 
 input, textarea {
@@ -155,7 +154,7 @@ textarea {
     border: 0;
     background-color: #ed145d;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     border: 2px solid #ed145d;
 }

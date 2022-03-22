@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link para os estilos -->
     <link rel="stylesheet" href="./css/style.css">
-    <title>Projeto Traveller - Cadastro de Pontos Turísticos</title>
+    <title>Projeto Traveller - Cadastro de pontos turísticos</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="container">
-        <h2>Cadastro de Pontos Turísticos</h2>
+        <h2>Cadastro de pontos turísticos</h2>
 
         <form name="dados" id="dados" action="" method="post">
             <div class="campos">
@@ -120,7 +120,7 @@
                 <div class="em__linha">
                     <input type="time" id="inicio-funcionamento">
                     <input type="time" id="fim-funcionamento">
-                    <input list="list-melhor-dia" id="melhor-dia" class="lista" placeholder="ex: Selecione o dia">
+                    <input list="list-melhor-dia" id="melhor-dia" class="lista" placeholder="Selecione o dia">
                     <datalist id="list-melhor-dia">
                         <option value="Domingo"></option>
                         <option value="Segunda-feira"></option>
@@ -139,7 +139,7 @@
                     <label for="infos">Mais informações</label>
                 </div>
                 <div class="em__linha">
-                    <fieldset>
+                    <fieldset name="ingresso">
                         <input type="radio" name="ingresso" id="gratuito" class="radio_check">
                         <label for="gratuito">Gratuito</label>
                         <input type="radio" name="ingresso" id="pago" class="radio_check">
@@ -148,7 +148,7 @@
                     <input type="number" id="valor" placeholder="ex: 45">
                     <fieldset name="infos">
                         <input type="checkbox" name="infos" id="pet-friendly" class="radio_check">
-                        <label for="pet-friendly">Pet Friendly</label>                        
+                        <label for="pet-friendly">Pet Friendly</label>
                         <input type="checkbox" name="infos" id="pcd" class="radio_check">
                         <label for="pcd">Acessível PCD</label>
                     </fieldset>
@@ -161,14 +161,15 @@
                     <label for="avaliacao">Avaliação (de 1 a 5)</label>
                 </div>
                 <div class="em__linha">
-                    <input type="date" id="data_visita" > 
-                    <input type="datetime-local" id="data_hora_cadastro" >                    
+                    <input type="date" id="data_visita">
+                    <input type="datetime-local" id="data_hora_cadastro">
                     <input type="range" list="notas" id="avaliacao" min="1" max="5">
                 </div>
             </div>
             <div class="campos">
                 <label for="recomendacao">Recomendação</label>
-                <textarea name="" id="recomendacao" placeholder="ex.: O museu é  maravilhoso, com obras de Van Gogh, Monet, Rembrandt, Portinari, Anita Mafalti, Tarsila do Amaral e muitos outros artistas maravilhosos. Super recomendo a visita."></textarea>
+                <textarea name="" id="recomendacao"
+                    placeholder="ex.: O museu é  maravilhoso, com obras de Van Gogh, Monet, Rembrandt, Portinari, Anita Mafalti, Tarsila do Amaral e muitos outros artistas maravilhosos. Super recomendo a visita."></textarea>
             </div>
             <div class="botoes">
                 <input type="submit" value="Gravar ponto turístico">
